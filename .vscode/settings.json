@@ -6,7 +6,9 @@
         "editor.tabSize": 4,
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
-        }
+        },
+        "editor.formatOnPaste": false,
+        "editor.formatOnSaveMode": "file"
     },
     "python.autoComplete.addBrackets": true,
     "python.linting.enabled": true,
@@ -21,4 +23,5 @@
         "--tc",
         "-w 100"
     ],
+    "python.pythonPath": "c:\\Users\\Lucky\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\tukikage-api-h16OL14h-py3.9\\Scripts\\python.exe",
 }
