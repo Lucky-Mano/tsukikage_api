@@ -8,4 +8,4 @@ services:
     command: sleep infinity
     volumes:
       - ../:/remote-dev
-      - ~/.ssh:/root/.ssh
+      - ~/.ssh:/home/shirenger/.ssh:ro

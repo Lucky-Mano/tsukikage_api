@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  tsuki:
+    image: tsuki
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - 80:80
+    environment:
+      - PORT=80
+    volumes:
+      - ./tsukikage_api:/app
+      - ./config:/app/config

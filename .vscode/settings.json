@@ -23,5 +23,5 @@
         "--tc",
         "-w 100"
     ],
-    "python.pythonPath": "/root/.cache/pypoetry/virtualenvs/tukikage-api-B4yf73BG-py3.9/bin/python",
+    "python.pythonPath": "c:\\Users\\Lucky\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\tukikage-api-h16OL14h-py3.9\\Scripts\\python.exe",
 }
