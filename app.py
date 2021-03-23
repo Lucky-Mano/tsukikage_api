@@ -1,13 +1,5 @@
 """Application main."""
-from logging import INFO, Formatter, getLogger
-
 from tsukikage_api.endpoint import api
-
-log_level = INFO
-
-logger = getLogger(__name__)
-logger.setLevel(log_level)
-formatter = Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 
 
 def main():

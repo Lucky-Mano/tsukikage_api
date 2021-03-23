@@ -1,11 +1,15 @@
 """API endpoint is hear."""
 import json
-from logging import getLogger
+from logging import INFO, Formatter, getLogger
 from pathlib import Path
 
 import responder
 
+log_level = INFO
+
 logger = getLogger(__name__)
+logger.setLevel(log_level)
+formatter = Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 
 api = responder.API(
     cors=True,
@@ -27,3 +31,15 @@ def auth(req, resp):
             "",
         ]
     )
+
+
+@api.route("/api/rescue")
+def rescue(req, resp):
+    """Handle rescue request."""
+    pass
+
+
+@api.route("/api/ranking")
+def ranking(req, resp):
+    """Handle ranking request."""
+    pass
