@@ -1,4 +1,5 @@
 """Application main."""
+
 from tsukikage_api.endpoint import api
 
 

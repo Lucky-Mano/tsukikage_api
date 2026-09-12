@@ -6,7 +6,7 @@ ENV DIR=/app
 
 RUN apt-get update && \
   apt-get install --no-install-recommends build-essential -y && \
-  pip install -U --no-cache-dir pip setuptools wheel poetry && \
+  pip install -U --no-cache-dir pip setuptools wheel uv && \
   apt-get autoremove -y && \
   useradd -m shirenger && \
   rm -rf /var/lib/apt/lists/*

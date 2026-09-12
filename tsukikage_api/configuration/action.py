@@ -1,4 +1,5 @@
 """Action configuration."""
+
 from .base_config import BaseConfiguration
 
 

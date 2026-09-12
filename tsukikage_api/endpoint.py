@@ -1,4 +1,5 @@
 """API endpoint is hear."""
+
 import json
 from logging import INFO, Formatter, getLogger
 from pathlib import Path

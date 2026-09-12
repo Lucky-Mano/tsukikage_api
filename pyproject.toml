@@ -1,43 +1,55 @@
-[tool.poetry]
+[project]
 name = "tukikage_api"
 version = "0.1.0"
 description = ""
-authors = ["Lucky-Mano <phatbowie@gmail.com>"]
+authors = [{ name = "Lucky-Mano", email = "phatbowie@gmail.com" }]
+requires-python = ">=3.8,<4.0"
+dependencies = [
+    "bcrypt>=3.2.0,<4",
+    "pandas>=1.2.3,<2",
+    "responder>=2.0.7,<3",
+    "SQLAlchemy>=1.4.2,<2",
+]
 
-[tool.poetry.dependencies]
-python = "^3.8"
-bcrypt = "^3.2.0"
-pandas = "^1.2.3"
-responder = "^2.0.7"
-SQLAlchemy = "^1.4.2"
-
-[tool.poetry.dev-dependencies]
-flake8 = "*"
-isort = "*"
-mypy = "*"
-pre-commit = "*"
-pydocstyle = "*"
-pytest = "*"
-black = { version="*", allow-prereleases = true }
-
-[tool.black]
-line-length = 100
-target-version = ["py38"]
-exclude = '''
-(
-  \.eggs
-  | \.git
-  | \.mypy_cache
-  | \.pytest_cache
-  | dist
-)
-'''
-
-[tool.isort]
-include_trailing_comma = true
-line_length = 100
-multi_line_output = 3
+[dependency-groups]
+dev = [
+    "pre-commit>=3,<4",
+    "pytest>=6,<7",
+    "ruff>=0.11,<1",
+    "ty>=0.0.1a1",
+]
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build>=0.11.21,<0.12"]
+build-backend = "uv_build"
+
+[tool.uv]
+default-groups = ["dev"]
+constraint-dependencies = ["numpy<2"]
+
+[tool.uv.build-backend]
+module-name = "tsukikage_api"
+module-root = ""
+
+[tool.ruff]
+target-version = "py38"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "C90", "I", "D"]
+ignore = ["E203", "E266", "E501", "D104"]
+mccabe.max-complexity = 18
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.ty.environment]
+python-version = "3.8"
+
+[tool.ty.src]
+include = ["app.py", "tsukikage_api", "tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,27 +1,18 @@
 {
-    "files.eol": "\n",
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2,
-    "[python]": {
-        "editor.tabSize": 4,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        },
-        "editor.formatOnPaste": false,
-        "editor.formatOnSaveMode": "file"
+  "files.eol": "\n",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
     },
-    "python.autoComplete.addBrackets": true,
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": false,
-    "python.linting.pydocstyleEnabled": true,
-    "python.linting.pycodestyleEnabled": false,
-    "python.linting.flake8Enabled": true,
-    "python.linting.mypyEnabled": true,
-    "python.linting.lintOnSave": true,
-    "python.formatting.provider": "black",
-    "python.sortImports.args": [
-        "--tc",
-        "-w 100"
-    ],
-    "python.pythonPath": "/root/.cache/pypoetry/virtualenvs/tukikage-api-B4yf73BG-py3.9/bin/python",
+    "editor.formatOnPaste": false,
+    "editor.formatOnSaveMode": "file",
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "python.autoComplete.addBrackets": true,
+  "ruff.nativeServer": "on",
+  "ty.disableLanguageServer": false
 }

@@ -1,4 +1,5 @@
 """Parameter configuration."""
+
 from .base_config import BaseConfiguration
 
 

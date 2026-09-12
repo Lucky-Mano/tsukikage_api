@@ -1,11 +1,12 @@
 """Base configuration."""
+
 import json
 from abc import ABC
 from pathlib import Path
 from typing import Dict
 
 
-class BaseConfiguration(ABC):
+class BaseConfiguration(ABC):  # noqa: B024
     """Base configuration class."""
 
     def __init__(self, path: str) -> None:

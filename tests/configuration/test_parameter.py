@@ -1,4 +1,5 @@
 """Test parameter configuration."""
+
 from unittest import TestCase
 
 from tsukikage_api.configuration import ParameterConfig

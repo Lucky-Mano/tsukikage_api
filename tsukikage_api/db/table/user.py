@@ -1,4 +1,5 @@
 """User table."""
+
 from sqlalchemy import Column, Text
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.ext.declarative import declarative_base
@@ -6,7 +7,7 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 
-class User(Base):  # type: ignore
+class User(Base):
     """User table."""
 
     __tablename__ = "user"

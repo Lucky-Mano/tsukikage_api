@@ -15,8 +15,8 @@
 4. SUCCESS👍
 
 ### Use local python
-1. Install poetry
-2. Run `poetry install`
-3. Run `poetry run python app.py`
+1. Install [uv](https://docs.astral.sh/uv/)
+2. Run `uv sync`
+3. Run `uv run python app.py`
 4. Run ShirenV2.exe and authenticate.
 5. SUCCESS👍

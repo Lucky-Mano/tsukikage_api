@@ -1,4 +1,5 @@
 """Test response configuration."""
+
 from unittest import TestCase
 
 from tsukikage_api.configuration import ResponseConfig
